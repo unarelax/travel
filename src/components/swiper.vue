@@ -20,13 +20,10 @@ export default {
       swiperOption: {
         pagination: ".swiper-pagination"
       },
-      swiperList: [{
-        id: "0001",
-        imgUrl: require("../assets/images/1.png")
-      },{
-        id:"0002",
-        imgUrl: require("../assets/images/2.jpg")
-        }]
+      swiperList: [
+        { id: "0001", imgUrl: require("../assets/images/1.png") },
+        { id: "0002", imgUrl: require("../assets/images/2.jpg") }
+      ]
     };
   }
 };
