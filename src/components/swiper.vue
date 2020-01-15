@@ -22,10 +22,10 @@ export default {
       },
       swiperList: [{
         id: "0001",
-        imgUrl: "../assets/images/1.png"
+        imgUrl: require("../assets/images/1.png")
       },{
         id:"0002",
-        imgUrl: "../assets/images/2.jpg"
+        imgUrl: require("../assets/images/2.jpg")
         }]
     };
   }
