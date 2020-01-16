@@ -4,9 +4,6 @@
       <swiper-slide v-for="item of swiperList" :key="item.id">
         <img class="swiperimg" :src="item.imgUrl" />
       </swiper-slide>
-      <swiper-slide>
-        <img class="swiperimg" src="../assets/images/1.png" />
-      </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
@@ -18,11 +15,12 @@ export default {
   data() {
     return {
       swiperOption: {
-        pagination: ".swiper-pagination"
+        pagination: ".swiper-pagination",
+        loop: true
       },
       swiperList: [
-        { id: "0001", imgUrl: require("../assets/images/1.png") },
-        { id: "0002", imgUrl: require("../assets/images/2.jpg") }
+        { id: "0001", imgUrl: require("../assets/images/banner1.png") },
+        { id: "0002", imgUrl: require("../assets/images/banner2.jpg") }
       ]
     };
   }
