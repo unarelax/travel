@@ -1,6 +1,6 @@
 <template>
-  <swiper>
-    <div class="icons">
+  <div class="icons">
+    <swiper>
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -9,8 +9,8 @@
           <p class="icon-desc">{{ item.desc }}</p>
         </div>
       </swiper-slide>
-    </div>
-  </swiper>
+    </swiper>
+  </div>
 </template>
 
 <script>
@@ -61,6 +61,11 @@ export default {
         },
         {
           id: "0009",
+          imgUrl: require("../assets/images/icon1.png"),
+          desc: "hello"
+        },
+        {
+          id: "0001",
           imgUrl: require("../assets/images/icon1.png"),
           desc: "hello"
         }
