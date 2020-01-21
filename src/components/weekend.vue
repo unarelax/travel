@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪</div>
     <ul>
-      <li class="item" v-for="item of recommendList" :key="item.id">
+      <li class="item" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -16,36 +16,15 @@
 <script>
 export default {
   name: "HomeWeekend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl: require("../assets/images/weekend3.jpg"),
-          title: "德纳里山",
-          desc: "位于美国阿拉斯加州的中南部"
-        },
-        {
-          id: "0002",
-          imgUrl: require("../assets/images/weekend2.jpg"),
-          title: "德纳里山",
-          desc: "为北美洲的第一高峰。"
-        },
-        {
-          id: "0003",
-          imgUrl: require("../assets/images/weekend1.jpg"),
-          title: "德纳里山",
-          desc: "为北美洲的第一高峰。"
-        }
-      ]
-    };
+  props: {
+    list: Array
   }
 };
 </script>
 
 <style lang="stylus" scoped>
-@import "~styles/varibles.styl"
-@import "~styles/mixins.styl"
+@import "~@/assets/styles/varibles.styl"
+@import "~@/assets/styles/mixins.styl"
 .recommend-title
   line-height: .6rem
   background: $fontColor

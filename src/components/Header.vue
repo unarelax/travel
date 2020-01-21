@@ -8,7 +8,7 @@
       请输入你要搜索的城市/地点
     </div>
     <div class="header-right">
-      城市
+      {{ this.city }}
       <span class="iconfont arrow-icon">&#xe608;</span>
     </div>
   </div>
@@ -16,12 +16,15 @@
 
 <script>
 export default {
-  name: "homeheader"
+  name: "homeheader",
+  props: {
+    city: String
+  }
 };
 </script>
 
 <style lang="stylus" scoped>
-@import "~styles/varibles.styl"
+@import "~@/assets/styles/varibles.styl"
 .header
   display: flex
   height: 0.86rem

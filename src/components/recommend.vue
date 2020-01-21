@@ -2,11 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li
-        class="item border-bottom"
-        v-for="item of recommendList"
-        :key="item.id"
-      >
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -21,46 +17,15 @@
 <script>
 export default {
   name: "HomeRecommend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl: require("../assets/images/recommend1.jpg"),
-          title: "德纳里山",
-          desc:
-            "位于美国阿拉斯加州的中南部，是阿拉斯加山脉的中段，它海拔 6193 米，为北美洲的第一高峰。"
-        },
-        {
-          id: "0002",
-          imgUrl: require("../assets/images/recommend2.jpg"),
-          title: "德纳里山",
-          desc:
-            "位于美国阿拉斯加州的中南部，是阿拉斯加山脉的中段，它海拔 6193 米，为北美洲的第一高峰。"
-        },
-        {
-          id: "0003",
-          imgUrl: require("../assets/images/recommend3.jpg"),
-          title: "德纳里山",
-          desc:
-            "位于美国阿拉斯加州的中南部，是阿拉斯加山脉的中段，它海拔 6193 米，为北美洲的第一高峰。"
-        },
-        {
-          id: "0004",
-          imgUrl: require("../assets/images/recommend2.jpg"),
-          title: "德纳里山",
-          desc:
-            "位于美国阿拉斯加州的中南部，是阿拉斯加山脉的中段，它海拔 6193 米，为北美洲的第一高峰。"
-        }
-      ]
-    };
+  props: {
+    list: Array
   }
 };
 </script>
 
 <style lang="stylus" scoped>
-@import "~styles/varibles.styl"
-@import "~styles/mixins.styl"
+@import "~@/assets/styles/varibles.styl"
+@import "~@/assets/styles/mixins.styl"
 .recommend-title
   line-height: .6rem
   background: $fontColor

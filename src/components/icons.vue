@@ -16,71 +16,22 @@
 <script>
 export default {
   name: "homeicons",
+  props: {
+    list: Array
+  },
   data() {
     return {
       swiperOption: {
         pagination: ".swiper-pagination",
         autoplay: false
-      },
-      iconsList: [
-        {
-          id: "0001",
-          imgUrl: require("../assets/images/icon1.png"),
-          desc: "hellosdghfshjgksj"
-        },
-        {
-          id: "0002",
-          imgUrl: require("../assets/images/icon2.png"),
-          desc: "hello"
-        },
-        {
-          id: "0003",
-          imgUrl: require("../assets/images/icon3.png"),
-          desc: "hello"
-        },
-        {
-          id: "0004",
-          imgUrl: require("../assets/images/icon4.png"),
-          desc: "hello"
-        },
-        {
-          id: "0005",
-          imgUrl: require("../assets/images/icon5.png"),
-          desc: "hello"
-        },
-        {
-          id: "0006",
-          imgUrl: require("../assets/images/icon6.png"),
-          desc: "hello"
-        },
-        {
-          id: "0007",
-          imgUrl: require("../assets/images/icon7.png"),
-          desc: "hello"
-        },
-        {
-          id: "0008",
-          imgUrl: require("../assets/images/icon8.png"),
-          desc: "hello"
-        },
-        {
-          id: "0009",
-          imgUrl: require("../assets/images/icon1.png"),
-          desc: "hello"
-        },
-        {
-          id: "0001",
-          imgUrl: require("../assets/images/icon1.png"),
-          desc: "hello"
-        }
-      ]
+      }
     };
   },
   computed: {
     pages() {
       const pages = [];
-      if (this.iconsList) {
-        this.iconsList.forEach((item, index) => {
+      if (this.list) {
+        this.list.forEach((item, index) => {
           const page = Math.floor(index / 8);
           if (!pages[page]) {
             pages[page] = [];
@@ -95,8 +46,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "~styles/varibles.styl"
-@import "~styles/mixins.styl"
+@import "~@/assets/styles/varibles.styl"
+@import "~@/assets/styles/mixins.styl"
 .icons
   margin: 0.1rem
   overflow: hidden
