@@ -46,8 +46,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "~styles/varibles.styl"
-@import "~styles/mixins.styl"
+@import "~@/assets/styles/varibles.styl"
+@import "~@/assets/styles/mixins.styl"
 .icons
   margin: 0.1rem
   overflow: hidden
