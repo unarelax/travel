@@ -42,7 +42,7 @@ export default {
       font-size: .4rem
   .header-input
     flex: 1
-    height: .64rem
+    height: $inputHeight
     line-height: .64rem
     padding-left: .2rem
     margin-top: .12rem
