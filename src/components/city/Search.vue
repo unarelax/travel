@@ -26,4 +26,5 @@ export default {
       background: $nextGreen
       border-radius: .06rem
       color: $moreGreen
+      font-size: .28rem
 </style>
