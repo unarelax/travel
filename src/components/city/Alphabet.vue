@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     letters() {
-      const letters = []
+      const letters = [];
       for (let i in this.cities) {
         letters.push(i);
       }
@@ -53,7 +53,7 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer);
         }
-        this.timer = setTimeout(() =>{
+        this.timer = setTimeout(() => {
           const touchY = e.touches[0].clientY - 79;
           const index = Math.floor((touchY - this.startY) / 20);
           if (index >= 0 && index < this.letters.length) {
