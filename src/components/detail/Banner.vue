@@ -47,7 +47,6 @@ export default {
 
 <style lang="stylus" scoped>
 @import "~@/assets/styles/varibles.styl"
-import
 .banner
   position relative
   overflow: hidden
@@ -66,7 +65,8 @@ import
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
     .banner-title
       flex 1
-      font-size .32rem
+      font-size .30rem
+      color: #fff
       padding 0 .2rem
     .banner-number
       height .32rem
