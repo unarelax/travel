@@ -5,7 +5,7 @@
       v-for="item of letters"
       :key="item"
       :ref="item"
-      @touchstart="handleTouchStart"
+      @touchstart.prevent="handleTouchStart"
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
       @click="handleLetterClick"
@@ -48,6 +48,10 @@ export default {
       this.touchStatus = "true";
     },
     handleTouchMove(e) {
+      if (!e.isScroller) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
       if (this.touchStatus) {
         //函数节流
         if (this.timer) {

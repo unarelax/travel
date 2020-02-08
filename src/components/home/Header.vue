@@ -30,6 +30,7 @@ export default {
 <style lang="stylus" scoped>
 @import "~@/assets/styles/varibles.styl"
 .header
+  overflow hidden
   display: flex
   height: $headerHeight
   line-height: $headerHeight

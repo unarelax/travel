@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import "babel-polyfill";
 import state from "./state";
 import mutations from "./mutations";
 

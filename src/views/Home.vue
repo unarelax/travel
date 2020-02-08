@@ -65,4 +65,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.home {
+  overflow-x: hidden;
+}
+.css {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+}
+</style>
